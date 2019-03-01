@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Travellers Estimator</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.14/css/mdb.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <main class="container-fluid">
+
+    <h1>JavaScript for interactive apps!</h1><br>
+    <h3>Given peoplePerCar and number of cars, display the total number of people</h3>
+
+    <p>Enter your ID:
+      <input id="guest" type="number" value="26">
+    </p>
+    
+   <p>Enter your Name:
+      <input id="guest1" type="text" value="Prashanth">
+    </p>
+    <br>
+      
+      <p>Enter your peoplePerCar number:
+      <input id="firstNumber" type="number" value="12">
+    </p>
+    <p>Enter your cars number:
+      <input id="secondNumber" type="number" value="12">
+    </p>
+
+    <button id="clicker" class="btn btn-primary">Click me!</button>
+
+    <p id="result"></p>
+
+  </main>
+
+  <script>
+    console.log("SCRIPT START")
+    console.log("Declare functions..............................")
+    function prod(x, y) {
+      return x * y
+    }
+    console.log("prod= "+prod)
+    console.log("Declare event listeners .......................")
+    document.addEventListener("dblclick", function () {
+      console.log("prod(a,b)=" + prod(a, b))
+    })
+    document.getElementById("clicker").addEventListener("click", function () {
+      const s = parseInt(document.getElementById("guest").value)
+      const t = document.getElementById("guest1").value
+      const i = parseInt(document.getElementById("firstNumber").value)
+      console.log("i=" + i)
+      const j = parseInt(document.getElementById("secondNumber").value)
+      console.log("j=" + j)
+      const ans = t + ", total number of people are " + prod(i, j) + "."
+      document.getElementById("result").innerHTML = ans
+    })
+    console.log("SCRIPT END")
+  </script>
+
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.14/js/mdb.min.js"></script>
+</body>
+
+</html>
